@@ -121,7 +121,56 @@
 		.widget-thumbnails .row:first-child .y
 		{
 			padding-top: 0;
-		}	
+		}
+
+	
+	.widget-contact-mobi
+	{
+		text-align: center;
+	}
+	
+		.widget-contact-mobi ul
+		{
+			overflow: hidden;
+			position: relative;
+			margin-bottom: 0.5em;
+		}
+		
+			.widget-contact-mobi ul li
+			{
+				display: inline-block;
+				margin-right: .1em;
+				margin-left: .1em;
+			}
+
+				.widget-contact-mobi ul li a
+				{
+					display: inline-block;
+					width: 4.25em;
+					height: 4.25em;
+					line-height: 2.5em;
+					border-radius: 0.35em;
+					outline: 0;
+					opacity: 0.75;
+					-moz-transition: background-color .25s ease-in-out;
+					-webkit-transition: background-color .25s ease-in-out;
+					-o-transition: background-color .25s ease-in-out;
+					-ms-transition: background-color .25s ease-in-out;
+					transition: background-color .25s ease-in-out;
+					background: #555;
+				}
+				
+					.widget-contact-mobi ul li a:before
+					{
+						color: #f3f3f3;
+						font-size: 3em;
+						line-height: 1.5em;
+					}
+
+					.widget-contact-mobi ul li a:hover
+					{
+						background: #333;
+					}	
 
 /*********************************************************************************/
 /* Mobile UI                                                                     */
@@ -220,7 +269,7 @@
 	
 	#footer-wrapper
 	{
-		padding: 40px 30px 40px 30px;
+		padding: 0 30px 0 30px;
 	}
 
 /*********************************************************************************/
@@ -264,36 +313,13 @@
 	}
 
 /*********************************************************************************/
-/* Banner                                                                        */
+/* Contact Info                                                                  */
 /*********************************************************************************/
 
-	#banner
+	#contact-info
 	{
-		text-align: center;
+		display: none;
 	}
-	
-		#banner h2
-		{
-			font-size: 2em;
-			margin: 0.75em 0 0.5em 0;
-		}
-		
-		#banner p
-		{
-			font-size: 1.5em;
-			line-height: 1.5em;
-			margin: 0;
-		}
-
-		#banner ul
-		{
-			margin: 0;
-		}
-		
-		#banner .button
-		{
-			margin: 1em 0 0 0;
-		}
 
 /*********************************************************************************/
 /* Content                                                                       */
