@@ -17,7 +17,6 @@
 
 	h1, h2, h3, h4, h5, h6
 	{
-		color: #444;
 		font-weight: 800;
 	}
 
@@ -185,20 +184,10 @@
 	{
 	}
 
-		#logo h1
+		#logo a
 		{
 			float: left;
-			margin: 0 0.35em 0 0;
-			padding: 0.25em 0.2em 0.25em 0.2em;
-			font-size: 3.25em;
-			letter-spacing: 0.05em;
-		}
-
-		#logo span
-		{
-			line-height: 4.5em;
-			letter-spacing: 0.025em;
-			font-size: 1em;
+			margin-left: 1.75em;
 		}
 
 /*********************************************************************************/

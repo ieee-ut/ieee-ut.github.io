@@ -281,21 +281,13 @@
 		text-align: center;
 	}
 
-		#logo h1
+		#logo a
 		{
 			display: inline-block;
 			margin: 0 0 0.2em 0;
 			padding: 0.25em 0.2em 0.25em 0.2em;
 			font-size: 3.25em;
 			letter-spacing: 0.05em;
-		}
-
-		#logo span
-		{
-			display: block;
-			letter-spacing: 0.025em;
-			font-size: 0.9em;
-			margin: 0;
 		}
 
 /*********************************************************************************/

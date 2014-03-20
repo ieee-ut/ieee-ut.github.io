@@ -50,7 +50,7 @@
 	
 	h1, h2, h3, h4, h5, h6
 	{
-		color: #444;
+		color: #0053a0;
 		font-weight: 800;
 	}
 	
@@ -289,17 +289,12 @@
 			width: 100%;
 			height: 400px;
 			margin-bottom: 8px;
-			background: #888;
+			background: #0053a0;
 		}
 
 			.button.alt:hover
 			{
-				background: #696969;
-			}
-
-			.button.alt:active
-			{
-				background: #505050;
+				background: #006acc;
 			}
 
 	ul.style1
@@ -841,15 +836,18 @@
 
 					.widget-contact ul li:hover a
 					{
-
-						color: #696969;
 						-moz-transition: color .25s ease-in-out;
 						-webkit-transition: color .25s ease-in-out;
 						-o-transition: color .25s ease-in-out;
 						-ms-transition: color .25s ease-in-out;
 						transition: color .25s ease-in-out;
 					}
-				
+
+					.widget-contact ul li:hover a.fa-twitter{color: #55acee;}
+					.widget-contact ul li:hover a.fa-facebook{color: #46629e;}
+					.widget-contact ul li:hover a.fa-envelope{color: #fff;}
+					.widget-contact ul li:hover a.fa-google-plus{color: #d34836;}
+
 /*********************************************************************************/
 /* Wrappers                                                                      */
 /*********************************************************************************/
@@ -887,7 +885,7 @@
 
 	#logo
 	{
-		padding-left: 3.55em;
+		overflow: hidden;
 	}
 	
 /*********************************************************************************/
