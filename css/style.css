@@ -811,13 +811,20 @@
 			margin-bottom: 2.5em;
 		}
 
+
+	.widget-agenda
+	{
+		margin-bottom: 1em;
+	}
+
 	.widget-contact
 	{
+		margin-bottom: 1em;
 	}
 	
 		.widget-contact ul
 		{
-			float: right;
+			text-align: center;
 		}
 		
 			.widget-contact ul li
@@ -845,7 +852,15 @@
 
 					.widget-contact ul li:hover a.fa-twitter{color: #55acee;}
 					.widget-contact ul li:hover a.fa-facebook{color: #46629e;}
-					.widget-contact ul li:hover a.fa-envelope{color: #fff;}
+					.widget-contact ul li:hover a.fa-envelope
+					{
+						-moz-transition: color .15s ease-in-out;
+						-webkit-transition: color .11s ease-in-out;
+						-o-transition: color .15s ease-in-out;
+						-ms-transition: color .15s ease-in-out;
+						transition: color .15s ease-in-out;
+						color: #fff;
+					}
 					.widget-contact ul li:hover a.fa-google-plus{color: #d34836;}
 
 /*********************************************************************************/
@@ -886,6 +901,7 @@
 	#logo
 	{
 		overflow: hidden;
+		line-height: 0px;
 	}
 	
 /*********************************************************************************/
