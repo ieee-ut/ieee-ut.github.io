@@ -8,6 +8,15 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
+.poptrox-popup {
+-moz-box-sizing: content-box;
+-webkit-box-sizing: content-box;
+-o-box-sizing: content-box;
+-ms-box-sizing: content-box;
+box-sizing: content-box;
+}
+
 /*********************************************************************************/
 /* Basic                                                                         */
 /*********************************************************************************/
@@ -884,7 +893,30 @@
 	#footer-wrapper
 	{
 	}
+
+/*********************************************************************************/
+/* Gallery                                                                       */
+/*********************************************************************************/
+
+	#gallery
+	{
+		overflow: hidden;
+		line-height: 0px;
+	}
+
+
+		#gallery a
+		{
+			display: block;
+			float: left;
+		}
 	
+
+			#gallery a img
+			{
+				display: block;
+				border: 0;
+			}
 /*********************************************************************************/
 /* Header                                                                        */
 /*********************************************************************************/
