@@ -511,6 +511,11 @@ box-sizing: content-box;
 		text-align: center;
 	}
 
+	#events
+	{
+		min-height: 16em;
+	}
+
 	.slideshow
 	{
 		display: none;
@@ -966,6 +971,18 @@ box-sizing: content-box;
 	{
 		margin-bottom: 1em;
 	}
+
+		.widget-agenda div
+		{
+			display: block;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+
+		.widget-agenda .event-date
+		{
+			font-weight: 600;
+		}
 
 	.widget-contact
 	{
