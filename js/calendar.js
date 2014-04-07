@@ -90,6 +90,30 @@ function handleGDError(e) {
   }
 }
 
+function fadeOutIn(element1,element2) {
+    var op = 1;  // initial opacity
+    var op2 = 0.1;
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+            element1.style.display = 'none';
+            element2.style.opacity = op2;
+            element2.style.display = "block";
+            var timer2 = setInterval(function () {
+              if (op2 >= 1){
+                clearInterval(timer2);
+              }
+              element2.style.opacity = op2;
+              element2.style.filter = 'alpha(opacity=' + op2 * 100 + ")";
+              op2 += op2 * 0.1;
+            }, 15);
+        }
+        element1.style.opacity = op;
+        element1.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+    }, 15);
+}
+
 /**
  * Callback function for the Google data JS client library to call with a feed 
  * of events retrieved.
@@ -103,6 +127,7 @@ function handleGDError(e) {
 function listEvents(feedRoot) {
   var entries = feedRoot.feed.getEntries();
   var eventDiv = document.getElementById('events');
+  var loaderDiv = document.getElementById('calendar-loader');
   if (eventDiv.childNodes.length > 0) {
     eventDiv.removeChild(eventDiv.childNodes[0]);
   }	  
@@ -162,7 +187,9 @@ function listEvents(feedRoot) {
     /* append the list item onto the unordered list */
     ul.appendChild(li);
   }
+  ul.style.display="none";
   eventDiv.appendChild(ul);
+  fadeOutIn(loaderDiv,ul);
 }
 
 google.setOnLoadCallback(init);

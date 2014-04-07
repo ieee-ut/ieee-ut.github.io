@@ -979,6 +979,17 @@ box-sizing: content-box;
 			white-space: nowrap;
 		}
 
+		.widget-agenda #calendar-loader
+		{
+			text-align: center;
+			margin-top: 4em;
+		}
+
+		.widget-agenda i
+		{
+			display: inline-block;
+		}
+
 		.widget-agenda .event-date
 		{
 			font-weight: 600;
