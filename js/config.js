@@ -95,7 +95,7 @@ jQuery(function() {
 				$forward = $('<span class="forward"></span>'),
 				$backward = $('<span class="backward"></span>'),
 				$reel = $t.children('.reel'),
-				$items = $reel.children('article');
+				$items = $reel.children('div');
 			
 			var	pos = 0,
 				leftLimit,
