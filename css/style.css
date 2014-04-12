@@ -125,9 +125,8 @@ box-sizing: content-box;
 		{
 			display: inline-block;
 			width: 18em;
-			background: #fff;
 			text-align: center;
-			padding: 0 1em 3em 1em;
+			padding: 0 1em 0 1em;
 			margin: 0 2em 0 0;
 			white-space: normal;
 			opacity: 1.0;
@@ -150,7 +149,6 @@ box-sizing: content-box;
 				top: 0;
 				width: auto;
 				margin-right: -2em;
-				margin-bottom: 3em;
 			}
 		
 			.carousel article p
@@ -368,7 +366,6 @@ box-sizing: content-box;
 		{
 			display: block;
 			width: 100%;
-			border-radius: 8px;
 		}
 
 	.image-full
@@ -515,6 +512,107 @@ box-sizing: content-box;
 	{
 		min-height: 16em;
 	}
+
+
+	.fl-left
+	{
+		float: left;	
+	}
+
+	.fl-right
+	{
+		float: right;
+	}
+
+
+	.card-holder
+	{
+		display: inline-block;
+	}
+
+	
+		.card-holder a
+		{
+			color: #696969;
+			text-decoration: none;
+		}
+
+
+		.card-holder.mid
+		{
+			margin-left: 2.5em;
+			margin-right: 2.5em;
+		}
+
+	.card
+	{
+		width: 16em;
+		background: #fff;
+		box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.015);
+		box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.05);
+		margin-bottom: 1.5em;
+		text-align: center;
+		padding: 0 0 2em;
+		white-space: normal;
+		opacity: 1.0;
+		-moz-transition: opacity 0.45s ease-in-out;			
+		-webkit-transition: opacity 0.45s ease-in-out;			
+		-o-transition: opacity 0.45s ease-in-out;			
+		-ms-transition: opacity 0.45s ease-in-out;			
+		transition: opacity 0.45s ease-in-out;			
+	}
+
+		.card.front
+		{
+			position: relative;
+			z-index: 2;
+		}
+
+		.card.mid
+		{
+			position: relative;
+			background: #e5e5e5;
+			margin-bottom: -19em;
+			margin-left: -0.5em;
+			z-index: 1;
+		}
+
+			.card.mid img
+			{
+				opacity: .85;
+			}
+		
+		.card.back
+		{
+			position: relative;
+			background: #d7d7d7;
+			margin-bottom: -19em;
+			margin-left: -1em;
+			z-index: 0;
+		}
+
+			.card.back img
+			{
+				opacity: .7;
+			}
+
+		.card img
+		{
+			display: block;
+			width: 100%;
+			margin-bottom: 2em;
+		}
+
+		.card header
+		{
+			font-weight: 800;
+		}
+
+		.card p
+		{
+			margin: 0;
+			word-wrap: break-word;
+		}
 
 	.slideshow
 	{
