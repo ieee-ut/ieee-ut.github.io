@@ -21,28 +21,44 @@
 		<script src="js/calendar.js"></script>	  
 		<script>
 			function cardSwap(cardGroup) {
-				var cur_front, cur_mid, cur_back;
-				var new_front, new_mid, new_back;
+				var front, mid, back, fImg, fHeader, fP, mImg, mHeader, mP, bImg, bHeader, bP;
 				var cards = {};
 				cards = document.getElementById(cardGroup+'-cards').getElementsByTagName('*');
 				for(var i=0; i<cards.length; i++) {
-					if(cards[i].className.contains('front')) { cur_front=cards[i]; } else
-					if(cards[i].className.contains('mid')) { cur_mid=cards[i]; } else
-					if(cards[i].className.contains('back')) { cur_back=cards[i]; }
+					if(cards[i].className.indexOf('front') != -1) { front=cards[i]; } else
+					if(cards[i].className.indexOf('mid') != -1) { mid=cards[i]; } else
+					if(cards[i].className.indexOf('back') != -1) { back=cards[i]; }
 				}
-				var parent = cur_front.parentNode;
-				new_front = cur_mid.cloneNode();
-				new_mid = cur_back.cloneNode();
-				new_back = cur_front.cloneNode();
-				new_front.setAttribute("class", "card front");
-				new_mid.setAttribute("class", "card mid");
-				new_back.setAttribute("class", "card back");
-				cur_front.parentNode.removeChild(cur_front);
-				cur_mid.parentNode.removeChild(cur_mid);
-				cur_back.parentNode.removeChild(cur_back);
-				parent.appendChild(new_back);
-				parent.appendChild(new_mid);
-				parent.appendChild(new_front);
+				fImg = front.getElementsByTagName('img')[0];
+				fHeader = front.getElementsByTagName('header')[0];
+				fP = front.getElementsByTagName('p')[0];
+				fImgClone = fImg.cloneNode(true);
+				fHeaderClone = fHeader.cloneNode(true);
+				fPClone = fP.cloneNode(true);
+
+				mImg = mid.getElementsByTagName('img')[0];
+				mHeader = mid.getElementsByTagName('header')[0];
+				mP = mid.getElementsByTagName('p')[0];
+				mImgClone = mImg.cloneNode(true);
+				mHeaderClone = mHeader.cloneNode(true);
+				mPClone = mP.cloneNode(true);
+
+				bImg = back.getElementsByTagName('img')[0];
+				bHeader = back.getElementsByTagName('header')[0];
+				bP = back.getElementsByTagName('p')[0];
+				bImgClone = bImg.cloneNode(true);
+				bHeaderClone = bHeader.cloneNode(true);
+				bPClone = bP.cloneNode(true);
+
+				front.replaceChild(mImgClone, fImg);
+				mid.replaceChild(bImgClone, mImg);
+				back.replaceChild(fImgClone, bImg);
+				front.replaceChild(mHeaderClone, fHeader);
+				mid.replaceChild(bHeaderClone, mHeader);
+				back.replaceChild(fHeaderClone, bHeader);
+				front.replaceChild(mPClone, fP);
+				mid.replaceChild(bPClone, mP);
+				back.replaceChild(fPClone, bP);
 			}
 		</script>
 		<noscript>
@@ -101,7 +117,7 @@
 										<p>chair@ieee.org</p>
 									</div>
 								</div>		
-								<div class="card-holder mid">
+								<div class="card-holder middle">
 									<div class="card">
 										<img src="images/officers/tyler.png" />
 										<header>Tyler Walker</header>
@@ -123,7 +139,7 @@
 									</div>
 								</div>
 							
-								<div id="mp-cards" class="card-holder mid">
+								<div id="mp-cards" class="card-holder middle">
 									<a href="#" onclick="cardSwap('mp'); return false">	
 										<div class="card back">
 											<img src="images/officers/unknownmp.png" />
@@ -147,7 +163,7 @@
 										<div class="card back">
 											<img src="images/officers/unknownae.png" />
 											<header>?</header>
-											<p>ae@ieee.org</p>
+											<p>ao.events@ieee.org</p>
 										</div>
 										<div class="card mid">
 											<img src="images/officers/unknownae.png" />
@@ -157,7 +173,7 @@
 										<div class="card front">
 											<img src="images/officers/unknownae.png" />
 											<header>?</header>
-											<p>ao.events@ieee.org</p>
+											<p>ae@ieee.org</p>
 										</div>
 									</a>
 								</div>									
@@ -166,7 +182,7 @@
 										<div class="card back">
 											<img src="images/officers/unknownmr.png" />
 											<header>?</header>
-											<p>mr@ieee.org</p>
+											<p>ao.beta.mr@ieee.org</p>
 										</div>
 										<div class="card mid">
 											<img src="images/officers/unknownmr.png" />
@@ -176,16 +192,16 @@
 										<div class="card front">
 											<img src="images/officers/unknownmr.png" />
 											<header>?</header>
-											<p>ao.beta.mr@ieee.org</p>
+											<p>mr@ieee.org</p>
 										</div>
 									</a>
 								</div>								
-								<div id="sec-cards" class="card-holder mid">
+								<div id="sec-cards" class="card-holder middle">
 									<a href="#" onclick="cardSwap('sec'); return false">	
 										<div class="card back">
 											<img src="images/officers/unknownsec.png" />
 											<header>?</header>
-											<p>sec.rep@ieee.org</p>
+											<p>ao.beta.sec.rep@ieee.org</p>
 										</div>
 										<div class="card mid">
 											<img src="images/officers/unknownsec.png" />
@@ -195,7 +211,7 @@
 										<div class="card front">
 											<img src="images/officers/unknownsec.png" />
 											<header>?</header>
-											<p>ao.beta.sec.rep@ieee.org</p>
+											<p>sec.rep@ieee.org</p>
 										</div>
 									</a>
 								</div>									
