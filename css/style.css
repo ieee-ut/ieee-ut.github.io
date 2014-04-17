@@ -606,25 +606,6 @@ box-sizing: content-box;
 			-ms-user-select: none;
 			user-select: none;
 		}
-
-		.card-holder:hover div
-		{
-			-webkit-transition: all 0.3s ease-in-out;
-			transition: all 0.3s ease-in-out;
-		}
-
-		.card-holder:hover .back 
-		{
-			-webkit-transform: translateX(10%);
-			transform: translateX(10%);
-		}
-
-		.card-holder:hover .mid
-		{
-			-webkit-transform: translateX(5%);
-			transform: translateX(5%);
-		}
-
 	
 		.card-holder a
 		{

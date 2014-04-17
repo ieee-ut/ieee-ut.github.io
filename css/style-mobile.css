@@ -4,12 +4,6 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-.card-holder:hover div
-{
-	-webkit-transition: none;
-	transition: none;
-}
-
 /*********************************************************************************/
 /* Basic                                                                         */
 /*********************************************************************************/
@@ -102,7 +96,7 @@
 
 	.card-holder
 	{
-		width: 90%;
+		width: 16em;
 		margin-left: 10% !important;
 		display: block;
 	}		
