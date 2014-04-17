@@ -20,46 +20,29 @@
 		<script src="http://www.google.com/jsapi?key=YOUR_KEY_HERE"></script>
 		<script src="js/calendar.js"></script>	  
 		<script>
-			function cardSwap(cardGroup) {
-				var front, mid, back, fImg, fHeader, fP, mImg, mHeader, mP, bImg, bHeader, bP;
-				var cards = {};
-				cards = document.getElementById(cardGroup+'-cards').getElementsByTagName('*');
-				for(var i=0; i<cards.length; i++) {
-					if(cards[i].className.indexOf('front') != -1) { front=cards[i]; } else
-					if(cards[i].className.indexOf('mid') != -1) { mid=cards[i]; } else
-					if(cards[i].className.indexOf('back') != -1) { back=cards[i]; }
-				}
-				fImg = front.getElementsByTagName('img')[0];
-				fHeader = front.getElementsByTagName('header')[0];
-				fP = front.getElementsByTagName('p')[0];
-				fImgClone = fImg.cloneNode(true);
-				fHeaderClone = fHeader.cloneNode(true);
-				fPClone = fP.cloneNode(true);
+			var isAnimating = false;
 
-				mImg = mid.getElementsByTagName('img')[0];
-				mHeader = mid.getElementsByTagName('header')[0];
-				mP = mid.getElementsByTagName('p')[0];
-				mImgClone = mImg.cloneNode(true);
-				mHeaderClone = mHeader.cloneNode(true);
-				mPClone = mP.cloneNode(true);
-
-				bImg = back.getElementsByTagName('img')[0];
-				bHeader = back.getElementsByTagName('header')[0];
-				bP = back.getElementsByTagName('p')[0];
-				bImgClone = bImg.cloneNode(true);
-				bHeaderClone = bHeader.cloneNode(true);
-				bPClone = bP.cloneNode(true);
-
-				front.replaceChild(mImgClone, fImg);
-				mid.replaceChild(bImgClone, mImg);
-				back.replaceChild(fImgClone, bImg);
-				front.replaceChild(mHeaderClone, fHeader);
-				mid.replaceChild(bHeaderClone, mHeader);
-				back.replaceChild(fHeaderClone, bHeader);
-				front.replaceChild(mPClone, fP);
-				mid.replaceChild(bPClone, mP);
-				back.replaceChild(fPClone, bP);
+			function cardSwap () {
+			  	if(isAnimating) { return false; }
+			  	isAnimating = true;
+			  	var $front = $(this).children("div.front"),
+			  		$mid = $(this).children("div.mid"),
+			  		$back = $(this).children("div.back");
+		
+			    $front.addClass("card-rotateFall").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){ 
+			    	$mid.removeClass("mid").addClass("front");
+			    	$back.removeClass("back").addClass("mid");
+		    		$front.removeClass("front").removeClass("card-rotateFall").addClass("back").addClass("card-moveFromRight");
+	    			isAnimating = false;
+			    });
 			}
+
+			$(document).ready(function(){
+			  $("#mp-cards").click(cardSwap);
+			  $("#ae-cards").click(cardSwap);
+			  $("#mr-cards").click(cardSwap);
+			  $("#sec-cards").click(cardSwap);
+			});
 		</script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
@@ -140,80 +123,72 @@
 								</div>
 							
 								<div id="mp-cards" class="card-holder middle">
-									<a href="#" onclick="cardSwap('mp'); return false">	
-										<div class="card back">
-											<img src="images/officers/unknownmp.png" />
-											<header>?</header>
-											<p>ao.publicity@ieee.org</p>
-										</div>
-										<div class="card mid">
-											<img src="images/officers/unknownmp.png" />
-											<header>?</header>
-											<p>ao.multimedia@ieee.org</p>
-										</div>
-										<div class="card front">
-											<img src="images/officers/unknownmp.png" />
-											<header>?</header>
-											<p>mmp@ieee.org</p>
-										</div>	
-									</a>	
+									<div class="card back">
+										<img src="images/officers/unknownmp.png" />
+										<header>?</header>
+										<p>ao.publicity@ieee.org</p>
+									</div>
+									<div class="card mid">
+										<img src="images/officers/unknownmp.png" />
+										<header>?</header>
+										<p>ao.multimedia@ieee.org</p>
+									</div>
+									<div class="card front">
+										<img src="images/officers/unknownmp.png" />
+										<header>?</header>
+										<p>mmp@ieee.org</p>
+									</div>	
 								</div>								
 								<div id="ae-cards" class="card-holder">
-									<a href="#" onclick="cardSwap('ae'); return false">	
-										<div class="card back">
-											<img src="images/officers/unknownae.png" />
-											<header>?</header>
-											<p>ao.events@ieee.org</p>
-										</div>
-										<div class="card mid">
-											<img src="images/officers/unknownae.png" />
-											<header>?</header>
-											<p>ao.activities@ieee.org</p>
-										</div>
-										<div class="card front">
-											<img src="images/officers/unknownae.png" />
-											<header>?</header>
-											<p>ae@ieee.org</p>
-										</div>
-									</a>
+									<div class="card back">
+										<img src="images/officers/unknownae.png" />
+										<header>?</header>
+										<p>ao.events@ieee.org</p>
+									</div>
+									<div class="card mid">
+										<img src="images/officers/unknownae.png" />
+										<header>?</header>
+										<p>ao.activities@ieee.org</p>
+									</div>
+									<div class="card front">
+										<img src="images/officers/unknownae.png" />
+										<header>?</header>
+										<p>ae@ieee.org</p>
+									</div>
 								</div>									
 								<div id="mr-cards" class="card-holder">
-									<a href="#" onclick="cardSwap('mr'); return false">	
-										<div class="card back">
-											<img src="images/officers/unknownmr.png" />
-											<header>?</header>
-											<p>ao.beta.mr@ieee.org</p>
-										</div>
-										<div class="card mid">
-											<img src="images/officers/unknownmr.png" />
-											<header>?</header>
-											<p>ao.alpha.mr@ieee.org</p>
-										</div>
-										<div class="card front">
-											<img src="images/officers/unknownmr.png" />
-											<header>?</header>
-											<p>mr@ieee.org</p>
-										</div>
-									</a>
+									<div class="card back">
+										<img src="images/officers/unknownmr.png" />
+										<header>?</header>
+										<p>ao.beta.mr@ieee.org</p>
+									</div>
+									<div class="card mid">
+										<img src="images/officers/unknownmr.png" />
+										<header>?</header>
+										<p>ao.alpha.mr@ieee.org</p>
+									</div>
+									<div class="card front">
+										<img src="images/officers/unknownmr.png" />
+										<header>?</header>
+										<p>mr@ieee.org</p>
+									</div>
 								</div>								
 								<div id="sec-cards" class="card-holder middle">
-									<a href="#" onclick="cardSwap('sec'); return false">	
-										<div class="card back">
-											<img src="images/officers/unknownsec.png" />
-											<header>?</header>
-											<p>ao.beta.sec.rep@ieee.org</p>
-										</div>
-										<div class="card mid">
-											<img src="images/officers/unknownsec.png" />
-											<header>?</header>
-											<p>ao.alpha.sec.rep@ieee.org</p>
-										</div>
-										<div class="card front">
-											<img src="images/officers/unknownsec.png" />
-											<header>?</header>
-											<p>sec.rep@ieee.org</p>
-										</div>
-									</a>
+									<div class="card back">
+										<img src="images/officers/unknownsec.png" />
+										<header>?</header>
+										<p>ao.beta.sec.rep@ieee.org</p>
+									</div>
+									<div class="card mid">
+										<img src="images/officers/unknownsec.png" />
+										<header>?</header>
+										<p>ao.alpha.sec.rep@ieee.org</p>
+									</div>
+									<div class="card front">
+										<img src="images/officers/unknownsec.png" />
+										<header>?</header>
+										<p>sec.rep@ieee.org</p>
+									</div>
 								</div>									
 								<div class="card-holder">
 									<div class="card">

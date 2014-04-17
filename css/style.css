@@ -8,6 +8,57 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+.card-moveFromRight
+{
+	-webkit-animation: moveFromRightFade .7s ease both;
+	-moz-animation: moveFromRightFade .7s ease both;
+	animation: moveFromRightFade .7s ease both;
+}
+
+@-webkit-keyframes moveFromRightFade {
+	from { opacity: 0.3; -webkit-transform: translateX(100%); }
+}
+@-moz-keyframes moveFromRightFade {
+	from { opacity: 0.3; -moz-transform: translateX(100%); }
+}
+@keyframes moveFromRightFade {
+	from { opacity: 0.3; transform: translateX(100%); }
+}
+
+/* rotate fall */
+
+.card-rotateFall {
+	-webkit-transform-origin: 0% 0%;
+	-webkit-animation: rotateFall 1s both ease-in;
+	-moz-transform-origin: 0% 0%;
+	-moz-animation: rotateFall 1s both ease-in;
+	transform-origin: 0% 0%;
+	animation: rotateFall 1s both ease-in;
+}
+
+/* fall */
+
+@-webkit-keyframes rotateFall {
+	0% { -webkit-transform: rotateZ(0deg); }
+	20% { -webkit-transform: rotateZ(10deg); -webkit-animation-timing-function: ease-out; }
+	40% { -webkit-transform: rotateZ(17deg); }
+	60% { -webkit-transform: rotateZ(16deg); }
+	100% { -webkit-transform: translateY(200%) rotateZ(17deg); }
+}
+@-moz-keyframes rotateFall {
+	0% { -moz-transform: rotateZ(0deg); }
+	20% { -moz-transform: rotateZ(10deg); -moz-animation-timing-function: ease-out; }
+	40% { -moz-transform: rotateZ(17deg); }
+	60% { -moz-transform: rotateZ(16deg); }
+	100% { -moz-transform: translateY(250%) rotateZ(17deg); }
+}
+@keyframes rotateFall {
+	0% { transform: rotateZ(0deg); }
+	20% { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+	40% { transform: rotateZ(17deg); }
+	60% { transform: rotateZ(16deg); }
+	100% { transform: translateY(250%) rotateZ(17deg); }
+}
 
 .poptrox-popup {
 -moz-box-sizing: content-box;
@@ -534,6 +585,11 @@ box-sizing: content-box;
 		position: relative;
 		display: inline-block;
 	}
+
+		.card-holder:hover
+		{
+			cursor: pointer;
+		}
 
 	
 		.card-holder a
