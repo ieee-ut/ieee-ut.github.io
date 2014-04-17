@@ -527,6 +527,11 @@ box-sizing: content-box;
 
 	.card-holder
 	{
+		top: 0;
+		left: 0;
+		width: 16em;
+		height: 22em;
+		position: relative;
 		display: inline-block;
 	}
 
@@ -546,6 +551,7 @@ box-sizing: content-box;
 
 	.card
 	{
+		position: absolute;
 		width: 16em;
 		background: #fff;
 		box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.015);
@@ -564,16 +570,16 @@ box-sizing: content-box;
 
 		.card.front
 		{
-			position: relative;
+			top: 0;
+			left: 0;
 			z-index: 2;
 		}
 
 		.card.mid
 		{
-			position: relative;
+			top: .5em;
+			left: .5em;
 			background: #e5e5e5;
-			margin-bottom: -19em;
-			margin-left: -0.5em;
 			z-index: 1;
 		}
 
@@ -584,10 +590,9 @@ box-sizing: content-box;
 		
 		.card.back
 		{
-			position: relative;
+			top: 1em;
+			left: 1em;
 			background: #d7d7d7;
-			margin-bottom: -19em;
-			margin-left: -1em;
 			z-index: 0;
 		}
 
