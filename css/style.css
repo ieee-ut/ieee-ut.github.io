@@ -589,6 +589,30 @@ box-sizing: content-box;
 		.card-holder:hover
 		{
 			cursor: pointer;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		.card-holder:hover div
+		{
+			-webkit-transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.card-holder:hover .back 
+		{
+			-webkit-transform: translateX(10%);
+			transform: translateX(10%);
+		}
+
+		.card-holder:hover .mid
+		{
+			-webkit-transform: translateX(5%);
+			transform: translateX(5%);
 		}
 
 	
@@ -1232,6 +1256,10 @@ box-sizing: content-box;
 		line-height: 0px;
 	}
 
+		#gallery h3
+		{
+			line-height: 1em;
+		}
 
 		#gallery a
 		{
