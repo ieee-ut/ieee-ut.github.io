@@ -104,15 +104,15 @@
 				border-bottom-right-radius: 0;
 			}
 
-	.card-holder
+	.card
 	{
 		width: 20em;
-		height: 26em;
 	}
 
 	.card-holder
 	{
 		width: 20em;
+		height: 26em;
 		margin-left: 3em !important;
 		display: block;
 	}		
