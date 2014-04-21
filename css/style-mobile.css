@@ -5,13 +5,13 @@
 */
 
 @-webkit-keyframes moveFromRightFade {
-	from { opacity: 0.3; -webkit-transform: translateX(40%); }
+	from { opacity: 0.3; -webkit-transform: translateX(2.5em); }
 }
 @-moz-keyframes moveFromRightFade {
-	from { opacity: 0.3; -moz-transform: translateX(40%); }
+	from { opacity: 0.3; -moz-transform: translateX(2.5em); }
 }
 @keyframes moveFromRightFade {
-	from { opacity: 0.3; transform: translateX(40%); }
+	from { opacity: 0.3; transform: translateX(2.5em); }
 }
 
 /*********************************************************************************/
