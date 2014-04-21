@@ -2,8 +2,8 @@
 layout: default
 title: "Home"
 ---
-{% for post in site.posts %}
-<article class="box" id="{{ post.title }}">
+{% for post in paginator.posts %}
+<article class="box{% if page.next == nil %} last{% endif %}" id="{{ post.title }}">
 	<h2 class="title">{{ post.title }}</h2>
 	<p class="byline">{{ post.date | date:'%B %d, %Y' | replace:' 0',' ' }} — {{ post.author }}</p>
 	{{ post.content }}

@@ -1,3 +1,5 @@
 name: IEEE UT
 markdown: redcarpet
 pygments: true
+paginate: 5
+paginate-path: "/page:num"
