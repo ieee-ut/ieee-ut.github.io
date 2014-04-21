@@ -6,9 +6,9 @@
 -->
 <html>
 	<head>
-		<title>IEEE UT - Partners</title>
+		<title>IEEE UT - {{ page.title }}</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="Corporate partners of IEEE UT" />
+		<meta name="description" content="{{ page.description }}"/>
 		<meta name="keywords" content="" />
 		<link rel="icon" href="images/ieee_favicon.png" />
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,800" rel="stylesheet" type="text/css" />
@@ -17,7 +17,10 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
 		<script src="http://www.google.com/jsapi?key=YOUR_KEY_HERE"></script>
-		<script src="js/calendar.js"></script>	  
+		<script src="js/calendar.js"></script>
+		{% for js in page.js %}
+		<script src="{{ js }}"></script>
+		{% endfor %}
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -40,19 +43,7 @@
 							<div id="logo">
 								<a href="#"><img src="images/IEEE_logo_web.png" height="80"></a>
 							</div>
-
-								<nav id="nav">
-									<ul>
-										<li class="first"><a href="index">Home</a></li>
-										<li><a href="branch">Branch Information</a></li>
-										<li class="current_page_item"><a href="partners">Corporate Partners</a></li>
-										<li><a href="gallery">Gallery</a></li>
-										<li><a href="giving">Giving</a></li>
-										<li><a href="officers">Officers</a></li>
-										<li class="last"><a href="societies">Societies</a></li>
-									</ul>
-								</nav>
-
+							{% include nav.html %}
 						</header>
 
 					</div>
@@ -68,28 +59,7 @@
 
 						<!-- Content -->
 							<div id="content">
-								<article class="box last">
-									
-									<h2>Corporate Partners</h2>
-
-									<p>
-										The IEEE Student Branch at The University of Texas at Austin would not exist without the generous support of corporate partners. We're always pleased to develop new relationships with our electrical engineering counterparts in the professional world. Need internship or job positions filled? Supporting a Branch event is a great way to do it! For more information about ways your company can work with the Branch, please refer to our <a href="files/IEEE_Corporate_Packet_2012-2013.pdf">2012 - 2013 Corporate Package</a>.				
-									</p>
-
-									<span style="text-align: center;">
-										<h3>IEEE Platinum-Level Partners</h3>
-										<p style="word-spacing: 0.7em;">Salesforce.com     Qualcomm</p>
-										<h3>IEEE Gold-Level Partners</h3>
-										<p style="word-spacing: 0.7em;">Schlumberger     TI     DuPont</p>
-										<h3>IEEE Silver-Level Partners</h3>
-										<p style="word-spacing: 0.7em;">Fluor     USAA     NI</p>
-										<h3>IEEE Bronze-Level Partners</h3>
-										<p style="word-spacing: 0.7em;">Microsoft     Accenture</p>
-										<h3>Friends of IEEE</h3>
-										<p>Intel</p>
-									</span>
-
-								</article>						
+								{{ content }}
 							</div>
 
 					</div>

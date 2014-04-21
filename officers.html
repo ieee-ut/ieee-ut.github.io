@@ -1,260 +1,134 @@
-<!DOCTYPE HTML>
-<!--
-	Verti 2.5 by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>IEEE UT - Officers</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="Officers of IEEE UT" />
-		<meta name="keywords" content="" />
-		<link rel="icon" href="images/ieee_favicon.png" />
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,800" rel="stylesheet" type="text/css" />
-		<script src="js/jquery.min.js"></script>
-		<script src="js/config.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-panels.min.js"></script>
-		<script src="http://www.google.com/jsapi?key=YOUR_KEY_HERE"></script>
-		<script src="js/calendar.js"></script>	  
-		<script>
-			var isAnimating = false;
+---
+layout: default
+title: "Officers"
+---
+<h2>Who's That Officer?</h2>
+<div class="card-holder">
+	<div class="card">
+		<img src="images/officers/josh.png" />
+		<header>Joshua Frazor</header>
+		<p>chair@ieee.org</p>
+	</div>
+</div>		
+<div class="card-holder middle">
+	<div class="card">
+		<img src="images/officers/tyler.png" />
+		<header>Tyler Walker</header>
+		<p>vice.chair@ieee.org</p>
+	</div>
+</div>				
+<div class="card-holder">
+	<div class="card">
+		<img src="images/officers/walter.png" />
+		<header>Walter Oji</header>
+		<p>corporate.director@ieee.org</p>
+	</div>
+</div>	
+<div class="card-holder">
+	<div class="card">
+		<img src="images/officers/kyle.png" />
+		<header>Kyle Cousino</header>
+		<p>executive.director@ieee.org</p>
+	</div>
+</div>
 
-			function cardSwap () {
-			  	if(isAnimating) { return false; }
-			  	isAnimating = true;
-			  	var $front = $(this).children("div.front"),
-			  		$mid = $(this).children("div.mid"),
-			  		$back = $(this).children("div.back");
-		
-			    $front.addClass("card-rotateFall").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){ 
-			    	$mid.removeClass("mid").addClass("front");
-			    	$back.removeClass("back").addClass("mid");
-		    		$front.removeClass("front").removeClass("card-rotateFall").addClass("back").addClass("card-moveFromRight");
-	    			isAnimating = false;
-			    });
-			}
+<div id="mp-cards" class="card-holder middle">
+	<div class="card back">
+		<img src="images/officers/unknownmp.png" />
+		<header>?</header>
+		<p>ao.publicity@ieee.org</p>
+	</div>
+	<div class="card mid">
+		<img src="images/officers/unknownmp.png" />
+		<header>?</header>
+		<p>ao.multimedia@ieee.org</p>
+	</div>
+	<div class="card front">
+		<img src="images/officers/unknownmp.png" />
+		<header>?</header>
+		<p>mmp@ieee.org</p>
+	</div>	
+</div>								
+<div id="ae-cards" class="card-holder">
+	<div class="card back">
+		<img src="images/officers/unknownae.png" />
+		<header>?</header>
+		<p>ao.events@ieee.org</p>
+	</div>
+	<div class="card mid">
+		<img src="images/officers/unknownae.png" />
+		<header>?</header>
+		<p>ao.activities@ieee.org</p>
+	</div>
+	<div class="card front">
+		<img src="images/officers/unknownae.png" />
+		<header>?</header>
+		<p>ae@ieee.org</p>
+	</div>
+</div>									
+<div id="mr-cards" class="card-holder">
+	<div class="card back">
+		<img src="images/officers/unknownmr.png" />
+		<header>?</header>
+		<p>ao.beta.mr@ieee.org</p>
+	</div>
+	<div class="card mid">
+		<img src="images/officers/unknownmr.png" />
+		<header>?</header>
+		<p>ao.alpha.mr@ieee.org</p>
+	</div>
+	<div class="card front">
+		<img src="images/officers/unknownmr.png" />
+		<header>?</header>
+		<p>mr@ieee.org</p>
+	</div>
+</div>								
+<div id="sec-cards" class="card-holder middle">
+	<div class="card back">
+		<img src="images/officers/unknownsec.png" />
+		<header>?</header>
+		<p>ao.beta.sec.rep@ieee.org</p>
+	</div>
+	<div class="card mid">
+		<img src="images/officers/unknownsec.png" />
+		<header>?</header>
+		<p>ao.alpha.sec.rep@ieee.org</p>
+	</div>
+	<div class="card front">
+		<img src="images/officers/unknownsec.png" />
+		<header>?</header>
+		<p>sec.rep@ieee.org</p>
+	</div>
+</div>									
+<div class="card-holder">
+	<div class="card">
+		<img src="images/officers/unknowntreas.png" />
+		<header>?</header>
+		<p>treasurer@ieee.org</p>
+	</div>
+</div>
+<script>
+	var isAnimating = false;
 
-			$(document).ready(function(){
-			  $("#mp-cards").click(cardSwap);
-			  $("#ae-cards").click(cardSwap);
-			  $("#mr-cards").click(cardSwap);
-			  $("#sec-cards").click(cardSwap);
-			});
-		</script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel-noscript.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-		</noscript>
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
-		<!--[if lte IE 7]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
-	</head>
-	<body class="left-sidebar">
+	function cardSwap () {
+	  	if(isAnimating) { return false; }
+	  	isAnimating = true;
+	  	var $front = $(this).children("div.front"),
+	  		$mid = $(this).children("div.mid"),
+	  		$back = $(this).children("div.back");
 
-		<div id="header-wrapper">
-			<div class="container">
+	    $front.addClass("card-rotateFall").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){ 
+	    	$mid.removeClass("mid").addClass("front");
+	    	$back.removeClass("back").addClass("mid");
+    		$front.removeClass("front").removeClass("card-rotateFall").addClass("back").addClass("card-moveFromRight");
+			isAnimating = false;
+	    });
+	}
 
-				<div class="row">
-
-					<div class="12u">
-
-						<header id="header" class="header">
-												
-							<div id="logo">
-								<a href="#"><img src="images/IEEE_logo_web.png" height="80"></a>
-							</div>
-
-								<nav id="nav">
-									<ul>
-										<li class="first"><a href="index">Home</a></li>
-										<li><a href="branch">Branch Information</a></li>
-										<li><a href="partners">Corporate Partners</a></li>
-										<li><a href="gallery">Gallery</a></li>
-										<li><a href="giving">Giving</a></li>
-										<li class="current_page_item"><a href="officers">Officers</a></li>
-										<li class="last"><a href="societies">Societies</a></li>
-									</ul>
-								</nav>
-
-						</header>
-
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div id="feature-wrapper">
-			<div class="container">
-				<div class="row">
-					<div class="9u skel-cell-important">
-
-						<!-- Content -->
-							<div id="content">
-								<h2>Who's That Officer?</h2>
-								<div class="card-holder">
-									<div class="card">
-										<img src="images/officers/josh.png" />
-										<header>Joshua Frazor</header>
-										<p>chair@ieee.org</p>
-									</div>
-								</div>		
-								<div class="card-holder middle">
-									<div class="card">
-										<img src="images/officers/tyler.png" />
-										<header>Tyler Walker</header>
-										<p>vice.chair@ieee.org</p>
-									</div>
-								</div>				
-								<div class="card-holder">
-									<div class="card">
-										<img src="images/officers/walter.png" />
-										<header>Walter Oji</header>
-										<p>corporate.director@ieee.org</p>
-									</div>
-								</div>	
-								<div class="card-holder">
-									<div class="card">
-										<img src="images/officers/kyle.png" />
-										<header>Kyle Cousino</header>
-										<p>executive.director@ieee.org</p>
-									</div>
-								</div>
-							
-								<div id="mp-cards" class="card-holder middle">
-									<div class="card back">
-										<img src="images/officers/unknownmp.png" />
-										<header>?</header>
-										<p>ao.publicity@ieee.org</p>
-									</div>
-									<div class="card mid">
-										<img src="images/officers/unknownmp.png" />
-										<header>?</header>
-										<p>ao.multimedia@ieee.org</p>
-									</div>
-									<div class="card front">
-										<img src="images/officers/unknownmp.png" />
-										<header>?</header>
-										<p>mmp@ieee.org</p>
-									</div>	
-								</div>								
-								<div id="ae-cards" class="card-holder">
-									<div class="card back">
-										<img src="images/officers/unknownae.png" />
-										<header>?</header>
-										<p>ao.events@ieee.org</p>
-									</div>
-									<div class="card mid">
-										<img src="images/officers/unknownae.png" />
-										<header>?</header>
-										<p>ao.activities@ieee.org</p>
-									</div>
-									<div class="card front">
-										<img src="images/officers/unknownae.png" />
-										<header>?</header>
-										<p>ae@ieee.org</p>
-									</div>
-								</div>									
-								<div id="mr-cards" class="card-holder">
-									<div class="card back">
-										<img src="images/officers/unknownmr.png" />
-										<header>?</header>
-										<p>ao.beta.mr@ieee.org</p>
-									</div>
-									<div class="card mid">
-										<img src="images/officers/unknownmr.png" />
-										<header>?</header>
-										<p>ao.alpha.mr@ieee.org</p>
-									</div>
-									<div class="card front">
-										<img src="images/officers/unknownmr.png" />
-										<header>?</header>
-										<p>mr@ieee.org</p>
-									</div>
-								</div>								
-								<div id="sec-cards" class="card-holder middle">
-									<div class="card back">
-										<img src="images/officers/unknownsec.png" />
-										<header>?</header>
-										<p>ao.beta.sec.rep@ieee.org</p>
-									</div>
-									<div class="card mid">
-										<img src="images/officers/unknownsec.png" />
-										<header>?</header>
-										<p>ao.alpha.sec.rep@ieee.org</p>
-									</div>
-									<div class="card front">
-										<img src="images/officers/unknownsec.png" />
-										<header>?</header>
-										<p>sec.rep@ieee.org</p>
-									</div>
-								</div>									
-								<div class="card-holder">
-									<div class="card">
-										<img src="images/officers/unknowntreas.png" />
-										<header>?</header>
-										<p>treasurer@ieee.org</p>
-									</div>
-								</div>
-
-							</div>
-
-					</div>
-
-					<div class="3u">
-					
-						<div id="sidebar">
-
-							<section class="box widget-agenda">
-								<div class="inner">
-
-									<h3>Agenda</h3>
-									<div id="events">
-										<div id="calendar-loader">
-											<span class="block">Loading</span>
-											<i class="fa fa-cog fa-spin"></i>
-										</div>
-									</div>
-
-								</div>
-							</section>
-
-							<div id="contact-info" class="widget-contact">
-								<ul>
-									<li>Stay Connected: </li>
-									<li><a href="https://twitter.com/ieeeut" class="fa fa-twitter solo"><span>Twitter</span></a></li>
-									<li><a href="https://www.facebook.com/groups/15813130939/" class="fa fa-facebook solo"><span>Facebook</span></a></li>
-									<li><a href="https://plus.google.com/u/0/b/114028258647414417408/114028258647414417408/about" class="fa fa-google-plus solo"><span>Google+</span></a></li>
-									<li><a href="mailto:ieee@ieeeut.org" class="fa fa-envelope solo"><span>Mail</span></a></li>
-								</ul>
-							</div>
-
-							<div id="contact-info-mobi" class="widget-contact-mobi">
-								<ul>
-									<li><a href="https://twitter.com/ieeeut" class="fa fa-twitter solo"><span>Twitter</span></a></li>
-									<li><a href="https://www.facebook.com/groups/15813130939/" class="fa fa-facebook solo"><span>Facebook</span></a></li>
-									<li><a href="https://plus.google.com/u/0/b/114028258647414417408/114028258647414417408/about" class="fa fa-google-plus solo"><span>Google+</span></a></li>
-									<li><a href="mailto:ieee@ieeeut.org" class="fa fa-envelope solo"><span>Mail</span></a></li>
-								</ul>
-							</div>
-						</div>
-
-					</div>
-			</div>
-		</div>
-
-		<div id="footer-wrapper">
-			<footer id="footer" class="container">
-				<div class="row">
-					<div class="12u">
-						<div id="copyright">
-							&copy; IEEE Student Branch at the University of Texas 2014. All rights reserved. | Design remixed from: <a href="http://html5up.net/">HTML5 UP</a>
-						</div>
-					</div>
-				</div>
-			</footer>
-		</div>
-
-	</body>
-</html>
+	$(document).ready(function(){
+	  $("#mp-cards").click(cardSwap);
+	  $("#ae-cards").click(cardSwap);
+	  $("#mr-cards").click(cardSwap);
+	  $("#sec-cards").click(cardSwap);
+	});
+</script>
