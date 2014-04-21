@@ -3,7 +3,7 @@ layout: default
 title: "Home"
 ---
 {% for post in site.posts %}
-<article class="box">
+<article class="box" id="{{ post.title }}">
 	<h2 class="title">{{ post.title }}</h2>
 	<p class="byline">{{ post.date | date:'%B %d, %Y' | replace:' 0',' ' }} — {{ post.author }}</p>
 	{{ post.content }}
@@ -11,7 +11,7 @@ title: "Home"
 {% endfor %}
 <script>
   function showSlides(slideId) {
-    document.getElementById('placeholder'+slideId).style.display = 'none';
-    document.getElementById('slideshow'+slideId).style.display = 'inline';
+    document.getElementById(slideId).getElementsByTagName('div')[0].style.display = 'none';
+    document.getElementById(slideId).getElementsByTagName('iframe')[0].style.display = 'inline';
   }
 </script>
