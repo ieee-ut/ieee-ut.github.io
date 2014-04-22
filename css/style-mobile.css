@@ -38,6 +38,11 @@
 		clear: both;
 		margin-bottom: 3em !important;
 	}
+
+	article:last-of-type
+	{
+		margin-bottom: 0 !important;
+	}
 	
 	section.last,
 	article.last
