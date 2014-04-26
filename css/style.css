@@ -8,236 +8,6 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Effect 4: fall perspective */
-#content {
-	-webkit-perspective: 1300px;
-	-moz-perspective: 1300px;
-	perspective: 1300px;
-}
-
-#content div.animate {
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	-webkit-transform: translateZ(400px) translateY(300px) rotateX(-90deg);
-	-moz-transform: translateZ(400px) translateY(300px) rotateX(-90deg);
-	transform: translateZ(400px) translateY(300px) rotateX(-90deg);
-	-webkit-animation: fallPerspective .8s ease-in-out forwards;
-	-moz-animation: fallPerspective .8s ease-in-out forwards;
-	animation: fallPerspective .8s ease-in-out forwards;
-}
-
-@-webkit-keyframes fallPerspective {
-	100% { -webkit-transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }
-}
-
-@-moz-keyframes fallPerspective {
-	100% { -moz-transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }
-}
-
-@keyframes fallPerspective {
-	100% { transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }
-}
-
-.card-moveFromRight
-{
-	-webkit-animation: moveFromRightFade .7s ease both !important;
-	-moz-animation: moveFromRightFade .7s ease both !important;
-	animation: moveFromRightFade .7s ease both !important;
-}
-
-@-webkit-keyframes moveFromRightFade {
-	from { opacity: 0.3; -webkit-transform: translateX(100%); }
-}
-@-moz-keyframes moveFromRightFade {
-	from { opacity: 0.3; -moz-transform: translateX(100%); }
-}
-@keyframes moveFromRightFade {
-	from { opacity: 0.3; transform: translateX(100%); }
-}
-
-/* rotate fall */
-
-.card-rotateFall {
-	-webkit-transform-origin: 0% 0% !important;
-	-webkit-animation: rotateFall 1s both ease-in !important;
-	-moz-transform-origin: 0% 0% !important;
-	-moz-animation: rotateFall 1s both ease-in !important;
-	transform-origin: 0% 0% !important;
-	animation: rotateFall 1s both ease-in !important;
-}
-
-/* fall */
-
-@-webkit-keyframes rotateFall {
-	0% { -webkit-transform: rotateZ(0deg); }
-	20% { -webkit-transform: rotateZ(10deg); -webkit-animation-timing-function: ease-out; }
-	40% { -webkit-transform: rotateZ(17deg); }
-	60% { -webkit-transform: rotateZ(16deg); }
-	100% { -webkit-transform: translateY(200%) rotateZ(17deg); }
-}
-@-moz-keyframes rotateFall {
-	0% { -moz-transform: rotateZ(0deg); }
-	20% { -moz-transform: rotateZ(10deg); -moz-animation-timing-function: ease-out; }
-	40% { -moz-transform: rotateZ(17deg); }
-	60% { -moz-transform: rotateZ(16deg); }
-	100% { -moz-transform: translateY(250%) rotateZ(17deg); }
-}
-@keyframes rotateFall {
-	0% { transform: rotateZ(0deg); }
-	20% { transform: rotateZ(10deg); animation-timing-function: ease-out; }
-	40% { transform: rotateZ(17deg); }
-	60% { transform: rotateZ(16deg); }
-	100% { transform: translateY(250%) rotateZ(17deg); }
-}
-
-.poptrox-popup {
--moz-box-sizing: content-box;
--webkit-box-sizing: content-box;
--o-box-sizing: content-box;
--ms-box-sizing: content-box;
-box-sizing: content-box;
-}
-
-/*********************************************************************************/
-/* Carousel                                                                      */
-/*********************************************************************************/
-
-	.carousel
-	{
-		position: relative;
-		overflow: hidden;
-		padding: 2em 0 2em 0;
-		border-bottom: solid 1px rgba(212,212,212,0.15);
-	}
-
-		.carousel .forward,
-		.carousel .backward
-		{
-			position: absolute;
-			top: 50%;
-			width: 6em;
-			height: 12em;
-			margin-top: -6em;
-			cursor: pointer;
-		}
-		
-		.carousel .forward
-		{
-			right: 0;
-		}
-		
-		.carousel .backward
-		{
-			left: 0;
-		}
-
-			.carousel .forward:before,
-			.carousel .backward:before
-			{
-				content: '';
-				display: block;
-				width: 6em;
-				height: 6em;
-				border-radius: 100%;
-				background-color: rgba(0,41,140, 0.5);				
-				position: absolute;
-				top: 50%;
-				margin-top: -3em;
-				-moz-transition: background-color 0.35s ease-in-out;
-				-webkit-transition: background-color 0.35s ease-in-out;
-				-o-transition: background-color 0.35s ease-in-out;
-				-ms-transition: background-color 0.35s ease-in-out;
-				transition: background-color 0.35s ease-in-out;
-				-webkit-backface-visibility: hidden;
-			}
-
-			.carousel .forward:after,
-			.carousel .backward:after
-			{
-				content: '';
-				width: 3em;
-				height: 3em;
-				position: absolute;
-				top: 50%;
-				margin: -1.5em 0 0 0;
-				background: url('images/arrow.svg') no-repeat center center;
-			}
-
-			.carousel .forward:after
-			{
-				right: -0.25em;
-			}
-
-			.carousel .backward:after
-			{
-				left: -0.25em;
-				-moz-transform: scaleX(-1);
-				-webkit-transform: scaleX(-1);
-				-o-transform: scaleX(-1);
-				-ms-transform: scaleX(-1);
-				transform: scaleX(-1);
-    		}
-			
-			.carousel .forward:before
-			{
-				right: -3em;
-			}
-			
-			.carousel .backward:before
-			{
-				left: -3em;
-			}
-
-			.carousel .forward:hover:before,
-			.carousel .backward:hover:before
-			{
-				background-color: rgba(0,116,224, 0.75);
-			}
-
-		.carousel .reel
-		{
-			white-space: nowrap;
-			position: relative;
-			-webkit-overflow-scrolling: touch;
-			padding: 0 2em 0 2em;
-		}
-	
-		.carousel article
-		{
-			display: inline-block;
-			width: 18em;
-			text-align: center;
-			padding: 0 1em 0 1em;
-			margin: 0 2em 0 0;
-			white-space: normal;
-			opacity: 1.0;
-			-moz-transition: opacity 0.45s ease-in-out;			
-			-webkit-transition: opacity 0.45s ease-in-out;			
-			-o-transition: opacity 0.45s ease-in-out;			
-			-ms-transition: opacity 0.45s ease-in-out;			
-			transition: opacity 0.45s ease-in-out;			
-		}
-		
-			.carousel article.loading
-			{
-				opacity: 0;
-			}
-		
-			.carousel article .image
-			{
-				position: relative;
-				left: -1em;
-				top: 0;
-				width: auto;
-				margin-right: -2em;
-			}
-		
-			.carousel article p
-			{
-				text-align: center;
-			}
-
 /*********************************************************************************/
 /* Basic                                                                         */
 /*********************************************************************************/
@@ -1338,7 +1108,239 @@ box-sizing: content-box;
 	{
 		display: block;
 	}
+
+/*********************************************************************************/
+/* Gallery                                                                       */
+/*********************************************************************************/
+
+	.poptrox-popup {
+		-moz-box-sizing: content-box;
+		-webkit-box-sizing: content-box;
+		-o-box-sizing: content-box;
+		-ms-box-sizing: content-box;
+		box-sizing: content-box;
+	}
+
+	.carousel
+	{
+		position: relative;
+		overflow: hidden;
+		padding: 2em 0 2em 0;
+		border-bottom: solid 1px rgba(212,212,212,0.15);
+	}
+
+		.carousel .forward,
+		.carousel .backward
+		{
+			position: absolute;
+			top: 50%;
+			width: 6em;
+			height: 12em;
+			margin-top: -6em;
+			cursor: pointer;
+		}
+		
+		.carousel .forward
+		{
+			right: 0;
+		}
+		
+		.carousel .backward
+		{
+			left: 0;
+		}
+
+			.carousel .forward:before,
+			.carousel .backward:before
+			{
+				content: '';
+				display: block;
+				width: 6em;
+				height: 6em;
+				border-radius: 100%;
+				background-color: rgba(0,41,140, 0.5);				
+				position: absolute;
+				top: 50%;
+				margin-top: -3em;
+				-moz-transition: background-color 0.35s ease-in-out;
+				-webkit-transition: background-color 0.35s ease-in-out;
+				-o-transition: background-color 0.35s ease-in-out;
+				-ms-transition: background-color 0.35s ease-in-out;
+				transition: background-color 0.35s ease-in-out;
+				-webkit-backface-visibility: hidden;
+			}
+
+			.carousel .forward:after,
+			.carousel .backward:after
+			{
+				content: '';
+				width: 3em;
+				height: 3em;
+				position: absolute;
+				top: 50%;
+				margin: -1.5em 0 0 0;
+				background: url('images/arrow.svg') no-repeat center center;
+			}
+
+			.carousel .forward:after
+			{
+				right: -0.25em;
+			}
+
+			.carousel .backward:after
+			{
+				left: -0.25em;
+				-moz-transform: scaleX(-1);
+				-webkit-transform: scaleX(-1);
+				-o-transform: scaleX(-1);
+				-ms-transform: scaleX(-1);
+				transform: scaleX(-1);
+    		}
+			
+			.carousel .forward:before
+			{
+				right: -3em;
+			}
+			
+			.carousel .backward:before
+			{
+				left: -3em;
+			}
+
+			.carousel .forward:hover:before,
+			.carousel .backward:hover:before
+			{
+				background-color: rgba(0,116,224, 0.75);
+			}
+
+		.carousel .reel
+		{
+			white-space: nowrap;
+			position: relative;
+			-webkit-overflow-scrolling: touch;
+			padding: 0 2em 0 2em;
+		}
 	
+		.carousel article
+		{
+			display: inline-block;
+			width: 18em;
+			text-align: center;
+			padding: 0 1em 0 1em;
+			margin: 0 2em 0 0;
+			white-space: normal;
+			opacity: 1.0;
+			-moz-transition: opacity 0.45s ease-in-out;			
+			-webkit-transition: opacity 0.45s ease-in-out;			
+			-o-transition: opacity 0.45s ease-in-out;			
+			-ms-transition: opacity 0.45s ease-in-out;			
+			transition: opacity 0.45s ease-in-out;			
+		}
+		
+			.carousel article.loading
+			{
+				opacity: 0;
+			}
+		
+			.carousel article .image
+			{
+				position: relative;
+				left: -1em;
+				top: 0;
+				width: auto;
+				margin-right: -2em;
+			}
+		
+			.carousel article p
+			{
+				text-align: center;
+			}
+
+/*********************************************************************************/
+/* Animations                                                                    */
+	/*********************************************************************************/
+	#content {
+		-webkit-perspective: 1300px;
+		-moz-perspective: 1300px;
+		perspective: 1300px;
+	}
+
+	#content div.animate {
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		-webkit-transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+		-moz-transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+		transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+		-webkit-animation: fallPerspective .8s ease-in-out forwards;
+		-moz-animation: fallPerspective .8s ease-in-out forwards;
+		animation: fallPerspective .8s ease-in-out forwards;
+	}
+
+	@-webkit-keyframes fallPerspective {
+		100% { -webkit-transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }
+	}
+
+	@-moz-keyframes fallPerspective {
+		100% { -moz-transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }
+	}
+
+	@keyframes fallPerspective {
+		100% { transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }
+	}
+
+	.card-moveFromRight
+	{
+		-webkit-animation: moveFromRightFade .7s ease both !important;
+		-moz-animation: moveFromRightFade .7s ease both !important;
+		animation: moveFromRightFade .7s ease both !important;
+	}
+
+	@-webkit-keyframes moveFromRightFade {
+		from { opacity: 0.3; -webkit-transform: translateX(100%); }
+	}
+	@-moz-keyframes moveFromRightFade {
+		from { opacity: 0.3; -moz-transform: translateX(100%); }
+	}
+	@keyframes moveFromRightFade {
+		from { opacity: 0.3; transform: translateX(100%); }
+	}
+
+	/* rotate fall */
+
+	.card-rotateFall {
+		-webkit-transform-origin: 0% 0% !important;
+		-webkit-animation: rotateFall 1s both ease-in !important;
+		-moz-transform-origin: 0% 0% !important;
+		-moz-animation: rotateFall 1s both ease-in !important;
+		transform-origin: 0% 0% !important;
+		animation: rotateFall 1s both ease-in !important;
+	}
+
+	/* fall */
+
+	@-webkit-keyframes rotateFall {
+		0% { -webkit-transform: rotateZ(0deg); }
+		20% { -webkit-transform: rotateZ(10deg); -webkit-animation-timing-function: ease-out; }
+		40% { -webkit-transform: rotateZ(17deg); }
+		60% { -webkit-transform: rotateZ(16deg); }
+		100% { -webkit-transform: translateY(200%) rotateZ(17deg); }
+	}
+	@-moz-keyframes rotateFall {
+		0% { -moz-transform: rotateZ(0deg); }
+		20% { -moz-transform: rotateZ(10deg); -moz-animation-timing-function: ease-out; }
+		40% { -moz-transform: rotateZ(17deg); }
+		60% { -moz-transform: rotateZ(16deg); }
+		100% { -moz-transform: translateY(250%) rotateZ(17deg); }
+	}
+	@keyframes rotateFall {
+		0% { transform: rotateZ(0deg); }
+		20% { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+		40% { transform: rotateZ(17deg); }
+		60% { transform: rotateZ(16deg); }
+		100% { transform: translateY(250%) rotateZ(17deg); }
+	}
+
 /*********************************************************************************/
 /* Footer                                                                        */
 /*********************************************************************************/
