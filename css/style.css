@@ -939,6 +939,8 @@
 		.fa-wheelchair:before{content:"\f193"}
 		.fa-vimeo-square:before{content:"\f194"}
 		.fa-turkish-lira:before,.fa-try:before{content:"\f195"}
+		.fa-send:before,.fa-paper-plane:before {content: "\f1d8";}
+		.fa-send-o:before,.fa-paper-plane-o:before {content: "\f1d9";}
 
 /*********************************************************************************/
 /* Widgets                                                                       */
@@ -1021,6 +1023,7 @@
 
 					.widget-contact ul li:hover a.fa-twitter{color: #55acee;}
 					.widget-contact ul li:hover a.fa-facebook{color: #46629e;}
+					.widget-contact ul li:hover a.fa-paper-plane,
 					.widget-contact ul li:hover a.fa-envelope
 					{
 						-moz-transition: color .15s ease-in-out;
