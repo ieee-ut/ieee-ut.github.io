@@ -1021,8 +1021,8 @@
 						transition: color .25s ease-in-out;
 					}
 
-					.widget-contact ul li:hover a.fa-twitter{color: #55acee;}
-					.widget-contact ul li:hover a.fa-facebook{color: #46629e;}
+					.widget-contact ul li:hover a.fa-twitte{color: #55acee;}
+					.widget-contact ul li:hover a.fa-faceboo{color: #46629e;}
 					.widget-contact ul li:hover a.fa-paper-plane,
 					.widget-contact ul li:hover a.fa-envelope
 					{
@@ -1033,7 +1033,7 @@
 						transition: color .15s ease-in-out;
 						color: #fff;
 					}
-					.widget-contact ul li:hover a.fa-google-plus{color: #d34836;}
+					.widget-contact ul li:hover a.fa-google-plu{color: #d34836;}
 
 /*********************************************************************************/
 /* Wrappers                                                                      */
