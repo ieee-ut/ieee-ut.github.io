@@ -964,6 +964,10 @@
 	{
 		margin-bottom: 1em;
 	}
+		.widget-agenda ul
+		{
+			margin-bottom: 0em;
+		}
 
 		.widget-agenda div
 		{
