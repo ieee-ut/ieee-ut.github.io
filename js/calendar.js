@@ -156,6 +156,8 @@ function listEvents(feedRoot) {
     if (!startDateTime.isDateOnly()) {
       if(startJSDate.getHours() < 12) {
         timeString = " " + startJSDate.getHours() + ":" + padNumber(startJSDate.getMinutes()) + "am";
+      } else if(startJSDate.getHours() == 12) {
+        timeString = " " + startJSDate.getHours() + ":" + padNumber(startJSDate.getMinutes()) + "pm";
       } else {
         timeString = " " + startJSDate.getHours() - 12 + ":" + padNumber(startJSDate.getMinutes()) + "pm";
       }
