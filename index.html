@@ -35,8 +35,9 @@ title: "Home"
 </div>
 {% endif %}
 <script>
-  function showSlides(slideId) {
+  function showSlides(slideId, presId) {
     document.getElementById(slideId).getElementsByTagName('div')[0].style.display = 'none';
+    document.getElementById(slideId).getElementsByTagName('iframe')[0].src = 'https://docs.google.com/a/ieee.ece.utexas.edu/presentation/d/' + presId + '/embed?start=false&amp;loop=false&amp;delayms=5000';
     document.getElementById(slideId).getElementsByTagName('iframe')[0].style.display = 'inline';
   }
 </script>
