@@ -987,7 +987,13 @@
 
 		.widget-agenda .event-date
 		{
+			font-size: 11pt;
 			font-weight: 600;
+		}
+
+		.widget-agenda .event-summary
+		{
+			font-size: 10pt;
 		}
 
 	.widget-contact
