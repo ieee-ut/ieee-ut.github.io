@@ -60,6 +60,7 @@ function loadEvents() {
 
           var entry = item;
           var title = item.summary;
+          title = title.replace("IEEE: ", "");
           var startDateTime = item.start.dateTime;
           var startJSDate = new Date(startDateTime);
           var entryLinkHref = null;
